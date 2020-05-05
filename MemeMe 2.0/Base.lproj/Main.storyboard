@@ -15,26 +15,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myU-f1-OrV">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myU-f1-OrV">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="AYL-Dh-pm5">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="DrR-bP-mp1"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="DrR-bP-mp1">
+                                            <color key="tintColor" red="0.0" green="0.71372549019607845" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHd-Rt-IYf">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHd-Rt-IYf">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hpx-C3-jR0"/>
-                                    <barButtonItem title="Item" image="camera" catalog="system" id="zw5-af-Axs"/>
+                                    <barButtonItem title="Item" image="camera" catalog="system" id="zw5-af-Axs">
+                                        <color key="tintColor" red="0.0" green="0.71372549019999998" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VrR-JW-rC1"/>
-                                    <barButtonItem title="Photos" id="kd6-q5-NXW"/>
+                                    <barButtonItem title="Photos" id="kd6-q5-NXW">
+                                        <color key="tintColor" red="0.0" green="0.71372549019999998" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="a8B-Za-zgR"/>
                                 </items>
+                                <color key="barTintColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="myU-f1-OrV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="J25-cO-ozd"/>
                             <constraint firstItem="JHd-Rt-IYf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NMW-eU-T2H"/>
