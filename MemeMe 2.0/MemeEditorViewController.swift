@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MemeEditorViewController: UIViewController {
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // MARK: - Outlets/Properties
         
