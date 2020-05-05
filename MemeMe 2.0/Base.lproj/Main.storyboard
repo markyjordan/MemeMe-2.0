@@ -15,18 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="myU-f1-OrV">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myU-f1-OrV">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="AYL-Dh-pm5">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="DrR-bP-mp1"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JHd-Rt-IYf">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHd-Rt-IYf">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hpx-C3-jR0"/>
                                     <barButtonItem title="Item" image="camera" catalog="system" id="zw5-af-Axs"/>
@@ -37,6 +35,16 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="myU-f1-OrV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="J25-cO-ozd"/>
+                            <constraint firstItem="JHd-Rt-IYf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NMW-eU-T2H"/>
+                            <constraint firstItem="JHd-Rt-IYf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OpG-Rt-x0N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JHd-Rt-IYf" secondAttribute="trailing" id="SZt-fd-Bj5"/>
+                            <constraint firstItem="myU-f1-OrV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Sq3-nj-TUD"/>
+                            <constraint firstItem="myU-f1-OrV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wvw-e5-TpH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="myU-f1-OrV" secondAttribute="trailing" id="Zhb-vN-b9A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JHd-Rt-IYf" secondAttribute="bottom" id="lJz-gD-7s2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
