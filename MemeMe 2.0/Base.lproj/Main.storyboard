@@ -44,12 +44,25 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-g3-sNZ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTJ-6o-GOP">
+                                <rect key="frame" x="15" y="103" width="384" height="18.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wt6-3K-JlX">
+                                <rect key="frame" x="15" y="779.5" width="384" height="18.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5qy-g3-sNZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0E6-qo-oHU"/>
+                            <constraint firstItem="KTJ-6o-GOP" firstAttribute="centerX" secondItem="myU-f1-OrV" secondAttribute="centerX" id="2zp-GM-ECx"/>
                             <constraint firstItem="JHd-Rt-IYf" firstAttribute="top" secondItem="5qy-g3-sNZ" secondAttribute="bottom" id="A2h-ED-guC"/>
+                            <constraint firstItem="KTJ-6o-GOP" firstAttribute="top" secondItem="myU-f1-OrV" secondAttribute="bottom" constant="15" id="Cmx-ks-Vgs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wt6-3K-JlX" secondAttribute="trailing" constant="15" id="HmP-Rn-kPK"/>
                             <constraint firstItem="myU-f1-OrV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="J25-cO-ozd"/>
                             <constraint firstItem="JHd-Rt-IYf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NMW-eU-T2H"/>
                             <constraint firstItem="JHd-Rt-IYf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OpG-Rt-x0N"/>
@@ -58,9 +71,14 @@
                             <constraint firstItem="myU-f1-OrV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Sq3-nj-TUD"/>
                             <constraint firstItem="5qy-g3-sNZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WJi-9r-Hbg"/>
                             <constraint firstItem="myU-f1-OrV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wvw-e5-TpH"/>
+                            <constraint firstItem="wt6-3K-JlX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="WwY-8m-n18"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="myU-f1-OrV" secondAttribute="trailing" id="Zhb-vN-b9A"/>
+                            <constraint firstItem="wt6-3K-JlX" firstAttribute="centerX" secondItem="JHd-Rt-IYf" secondAttribute="centerX" id="f0f-T8-n6a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KTJ-6o-GOP" secondAttribute="trailing" constant="15" id="fkk-4c-kia"/>
                             <constraint firstItem="5qy-g3-sNZ" firstAttribute="top" secondItem="myU-f1-OrV" secondAttribute="bottom" id="l61-Td-S3E"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JHd-Rt-IYf" secondAttribute="bottom" id="lJz-gD-7s2"/>
+                            <constraint firstItem="JHd-Rt-IYf" firstAttribute="top" secondItem="wt6-3K-JlX" secondAttribute="bottom" constant="15" id="lLj-WJ-biK"/>
+                            <constraint firstItem="KTJ-6o-GOP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="mww-jD-hLA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
