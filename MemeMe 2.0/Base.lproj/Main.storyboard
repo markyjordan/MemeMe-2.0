@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,45 +12,54 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myU-f1-OrV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <color key="barTintColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="AYL-Dh-pm5">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="DrR-bP-mp1">
                                             <color key="tintColor" red="0.0" green="0.71372549019607845" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="shareMemedImage" destination="BYZ-38-t0r" id="UAl-MR-Ok3"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHd-Rt-IYf">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hpx-C3-jR0"/>
                                     <barButtonItem title="Item" image="camera" catalog="system" id="zw5-af-Axs">
                                         <color key="tintColor" red="0.0" green="0.71372549019999998" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="selectImageFromCamera:" destination="BYZ-38-t0r" id="Ann-ez-lNG"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VrR-JW-rC1"/>
                                     <barButtonItem title="Photos" id="kd6-q5-NXW">
                                         <color key="tintColor" red="0.0" green="0.71372549019999998" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="selectImageFromAlbum:" destination="BYZ-38-t0r" id="frY-S3-lDv"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="a8B-Za-zgR"/>
                                 </items>
                                 <color key="barTintColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-g3-sNZ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTJ-6o-GOP">
-                                <rect key="frame" x="15" y="103" width="384" height="18.5"/>
+                                <rect key="frame" x="15" y="103" width="345" height="18.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wt6-3K-JlX">
-                                <rect key="frame" x="15" y="779.5" width="384" height="18.5"/>
+                                <rect key="frame" x="15" y="695.66666666666663" width="345" height="18.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -82,6 +91,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomTextField" destination="wt6-3K-JlX" id="ZkQ-rM-gnZ"/>
+                        <outlet property="cameraButton" destination="zw5-af-Axs" id="S2b-dD-3NZ"/>
+                        <outlet property="navigationBar" destination="myU-f1-OrV" id="BGv-Jp-Yyy"/>
+                        <outlet property="photoImageView" destination="5qy-g3-sNZ" id="I2M-vm-viy"/>
+                        <outlet property="shareButton" destination="DrR-bP-mp1" id="PoR-oB-FCP"/>
+                        <outlet property="toolBar" destination="JHd-Rt-IYf" id="dQN-dF-uRl"/>
+                        <outlet property="topTextField" destination="KTJ-6o-GOP" id="4hR-V2-F4d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

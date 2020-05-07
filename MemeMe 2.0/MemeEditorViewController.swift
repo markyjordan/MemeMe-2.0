@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// Mark: - MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegat
+
 class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // MARK: - Outlets/Properties
@@ -203,4 +205,3 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         present(sharingActivity, animated: true, completion: nil)
     }
 }
-
