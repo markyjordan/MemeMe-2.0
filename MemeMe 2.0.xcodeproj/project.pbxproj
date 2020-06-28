@@ -64,7 +64,7 @@
 			children = (
 				E205541B2461011B0059CA96 /* AppDelegate.swift */,
 				E205541D2461011B0059CA96 /* SceneDelegate.swift */,
-				E205541F2461011B0059CA96 /* MemeEditorViewController.swift */,
+				E259B543247F845F00CFE2B9 /* View Controllers */,
 				E205543424610D090059CA96 /* MemeTextFieldsDelegate.swift */,
 				E205543224610C9D0059CA96 /* Meme.swift */,
 				E20554212461011B0059CA96 /* Main.storyboard */,
@@ -82,6 +82,14 @@
 				E2055430246101F00059CA96 /* Impact.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E259B543247F845F00CFE2B9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E205541F2461011B0059CA96 /* MemeEditorViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

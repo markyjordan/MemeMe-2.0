@@ -38,7 +38,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     let memeTextFieldDelegate = MemeTextFieldsDelegate()
     
-    // MARK: Life Cycle
+    // MARK: - Life Cycle
 
     override func viewDidLoad() {
         
