@@ -16,6 +16,7 @@
 		E2055431246101F00059CA96 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2055430246101F00059CA96 /* Impact.ttf */; };
 		E205543324610C9D0059CA96 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205543224610C9D0059CA96 /* Meme.swift */; };
 		E205543524610D090059CA96 /* MemeTextFieldsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E205543424610D090059CA96 /* MemeTextFieldsDelegate.swift */; };
+		E2DE0FD524AAA2C6000C42F6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE0FD424AAA2C6000C42F6 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E2055430246101F00059CA96 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 		E205543224610C9D0059CA96 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		E205543424610D090059CA96 /* MemeTextFieldsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTextFieldsDelegate.swift; sourceTree = "<group>"; };
+		E2DE0FD424AAA2C6000C42F6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		E259B543247F845F00CFE2B9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E2DE0FD424AAA2C6000C42F6 /* TabBarController.swift */,
 				E205541F2461011B0059CA96 /* MemeEditorViewController.swift */,
 			);
 			path = "View Controllers";
@@ -167,6 +170,7 @@
 				E20554202461011B0059CA96 /* MemeEditorViewController.swift in Sources */,
 				E205543324610C9D0059CA96 /* Meme.swift in Sources */,
 				E205541C2461011B0059CA96 /* AppDelegate.swift in Sources */,
+				E2DE0FD524AAA2C6000C42F6 /* TabBarController.swift in Sources */,
 				E205543524610D090059CA96 /* MemeTextFieldsDelegate.swift in Sources */,
 				E205541E2461011B0059CA96 /* SceneDelegate.swift in Sources */,
 			);
