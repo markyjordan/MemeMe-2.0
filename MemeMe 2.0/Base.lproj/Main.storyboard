@@ -104,7 +104,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1212" y="1160"/>
+            <point key="canvasLocation" x="-1170" y="1159"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5kz-We-RNm">
@@ -122,7 +122,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJR-1s-ykQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1212" y="474"/>
+            <point key="canvasLocation" x="-1169" y="460"/>
         </scene>
         <!--Item-->
         <scene sceneID="YWY-WX-bcF">
