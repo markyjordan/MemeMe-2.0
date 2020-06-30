@@ -11,8 +11,13 @@ import UIKit
 private let reuseIdentifier = "SentMemesCollectionViewCell"
 
 class SentMemesCollectionViewController: UICollectionViewController {
-
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    // this computed property accesses the shared data model
+    var memes: [Meme]! {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.memes
+    }
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
@@ -20,23 +25,24 @@ class SentMemesCollectionViewController: UICollectionViewController {
        
         super.viewDidLoad()
 
-        // Register cell classes
+        // register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // flow layout setup
         let space: CGFloat = 3.0
-        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+        let cellWidth = (view.frame.size.width - (2 * space)) / 3.0
+        let cellHeight = (view.frame.size.height - (2 * space)) / 3.0
         
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
-        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
     }
 
     // MARK: - UICollectionView Data Source Methods
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        
+        return memes.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -48,5 +54,8 @@ class SentMemesCollectionViewController: UICollectionViewController {
     }
 
     // MARK: - UICollection View Delegate Methods
-
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        <#code#>
+    }
 }
