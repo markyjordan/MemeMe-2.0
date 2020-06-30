@@ -21,6 +21,8 @@ class SentMemesCollectionViewController: UICollectionViewController {
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
+    // MARK - Life Cycle
+    
     override func viewDidLoad() {
        
         super.viewDidLoad()
@@ -36,6 +38,14 @@ class SentMemesCollectionViewController: UICollectionViewController {
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        // refresh the collection view to show current meme data
+        collectionView!.reloadData()
     }
 
     // MARK: - UICollectionView Data Source Methods
