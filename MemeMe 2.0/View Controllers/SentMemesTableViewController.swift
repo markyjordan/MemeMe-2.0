@@ -46,8 +46,14 @@ class SentMemesTableViewController: UITableViewController {
     // MARK: - UITableView Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        
+        // populate the view controller with data from the selected item
         detailController.meme = memes[(indexPath as NSIndexPath).row]
+        
+        // present the view controller using navigation
+        navigationController!.pushViewController(detailController, animated: true)
     }
 
     /*
