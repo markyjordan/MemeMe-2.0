@@ -171,6 +171,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="7qg-xz-lXV"/>
+                    <connections>
+                        <outlet property="flowLayout" destination="Up3-Mo-Baq" id="okJ-lo-KUk"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LtI-qH-0Pq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
