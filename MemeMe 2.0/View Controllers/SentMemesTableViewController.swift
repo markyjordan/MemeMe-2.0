@@ -10,6 +10,13 @@ import UIKit
 
 class SentMemesTableViewController: UITableViewController {
 
+    // this computed property accesses the shared data model
+    var memes : [Meme]! {
+        return (UIApplication.shared.delegate as! AppDelegate).memes
+    }
+    
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +47,7 @@ class SentMemesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        detailController.meme = memes[(indexPath as NSIndexPath).row]
     }
 
     /*

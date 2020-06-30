@@ -11,7 +11,6 @@
         <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -103,6 +102,7 @@
                         <outlet property="topTextField" destination="KTJ-6o-GOP" id="4hR-V2-F4d"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1170" y="1153"/>
         </scene>
@@ -127,7 +127,6 @@
         <!--Item-->
         <scene sceneID="YWY-WX-bcF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PN6-HV-2jn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Hrt-0R-02Z" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="8oH-Og-vAY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yjb-mf-QV9">
@@ -138,6 +137,7 @@
                         <segue destination="g7Q-tw-24P" kind="relationship" relationship="rootViewController" id="Fvu-T5-EuJ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PN6-HV-2jn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-263" y="128"/>
         </scene>
@@ -228,7 +228,7 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="RAe-Ni-PdQ">
             <objects>
-                <viewController id="S47-Pl-80g" customClass="MemeDetailViewController" customModule="MemeMe_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" id="S47-Pl-80g" customClass="MemeDetailViewController" customModule="MemeMe_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="icI-uv-onc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
