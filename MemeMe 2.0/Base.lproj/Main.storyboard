@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1170" y="1153"/>
+            <point key="canvasLocation" x="-1135" y="1175"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5kz-We-RNm">
@@ -116,19 +116,19 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Hrt-0R-02Z" kind="relationship" relationship="viewControllers" id="QpI-yg-aQq"/>
                         <segue destination="fr8-M9-SLX" kind="relationship" relationship="viewControllers" id="ypi-br-DxL"/>
+                        <segue destination="Hrt-0R-02Z" kind="relationship" relationship="viewControllers" id="QpI-yg-aQq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJR-1s-ykQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1169" y="460"/>
+            <point key="canvasLocation" x="-1135" y="440"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="YWY-WX-bcF">
             <objects>
                 <navigationController id="Hrt-0R-02Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8oH-Og-vAY"/>
+                    <tabBarItem key="tabBarItem" title="" image="rectangle.split.3x3.fill" catalog="system" id="8oH-Og-vAY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yjb-mf-QV9">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -139,7 +139,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PN6-HV-2jn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-263" y="128"/>
+            <point key="canvasLocation" x="-226" y="822"/>
         </scene>
         <!--Sent Memes Collection View Controller-->
         <scene sceneID="K04-5K-N7p">
@@ -177,13 +177,13 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LtI-qH-0Pq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="128"/>
+            <point key="canvasLocation" x="682" y="822"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="FK1-gx-zgD">
             <objects>
                 <navigationController id="fr8-M9-SLX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="yg8-AI-rUz"/>
+                    <tabBarItem key="tabBarItem" title="" image="list.bullet" catalog="system" id="yg8-AI-rUz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VZD-aS-c0S">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -194,7 +194,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anc-KF-vX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-263" y="822"/>
+            <point key="canvasLocation" x="-226" y="75"/>
         </scene>
         <!--Sent Memes Table View Controller-->
         <scene sceneID="W8Z-UU-OoJ">
@@ -223,12 +223,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUM-FO-qb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="822"/>
+            <point key="canvasLocation" x="681" y="75"/>
         </scene>
         <!--Meme Detail View Controller-->
         <scene sceneID="RAe-Ni-PdQ">
             <objects>
-                <viewController storyboardIdentifier="MemeDetailViewController" id="S47-Pl-80g" customClass="MemeDetailViewController" customModule="MemeMe_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S47-Pl-80g" customClass="MemeDetailViewController" customModule="MemeMe_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="icI-uv-onc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,11 +238,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sth-j0-nhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="822"/>
+            <point key="canvasLocation" x="1583" y="822"/>
         </scene>
     </scenes>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="rectangle.split.3x3.fill" catalog="system" width="128" height="93"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>

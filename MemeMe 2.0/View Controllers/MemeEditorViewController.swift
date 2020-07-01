@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-// Mark: - MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegat
+// Mark: - MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 
 class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -71,6 +71,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     func initializeTextField(textField: UITextField, text: String) {
+        
         textField.delegate = memeTextFieldDelegate
         textField.text = text
         textField.defaultTextAttributes = memeTextAttributes
@@ -115,15 +116,17 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: - UIImagePickerControllerDelegate Methods
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         if let originalImage = info[.originalImage] as? UIImage {
             
             // set photoImageView to display the selected image
             photoImageView.image = originalImage
         }
-        dismiss(animated: true, completion: nil )
+        dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
         dismiss(animated: true, completion: nil)
     }
     
