@@ -50,7 +50,7 @@ class SentMemesTableViewController: UITableViewController {
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         
         // populate the view controller with data from the selected item
-        detailController.meme = memes[(indexPath as NSIndexPath).row]
+        detailController.memeToPresent = memes[(indexPath as NSIndexPath).row]
         
         // present the view controller using navigation
         navigationController!.pushViewController(detailController, animated: true)

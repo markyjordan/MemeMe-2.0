@@ -14,14 +14,14 @@ class MemeDetailViewController: UIViewController {
     
     @IBOutlet weak var memeImageView: UIImageView!
     
-    override func viewWillAppear(_animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
 
         super.viewWillAppear(animated)
         memeImageView.image = memeToPresent.memedImage
         self.tabBarController?.tabBar.isHidden = true
     }
     
-    override func viewWillDisappear(_animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         
         super.viewWillDisappear(animated)
         self.tabBarController?.tabBar.isHidden = false
