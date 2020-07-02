@@ -227,16 +227,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DRe-SJ-6zz">
-                                            <rect key="frame" x="4" y="4" width="114" height="113"/>
+                                            <rect key="frame" x="8" y="4" width="114" height="113"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="114" id="2VU-0d-DLQ"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbM-7d-w01">
+                                            <rect key="frame" x="130" y="50" width="237" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="DRe-SJ-6zz" firstAttribute="leading" secondItem="ump-99-ikl" secondAttribute="leading" constant="4" id="Fc9-ai-fqS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bbM-7d-w01" secondAttribute="bottom" constant="39" id="ChA-QF-zJT"/>
+                                        <constraint firstItem="DRe-SJ-6zz" firstAttribute="leading" secondItem="ump-99-ikl" secondAttribute="leading" constant="8" id="Fc9-ai-fqS"/>
                                         <constraint firstItem="DRe-SJ-6zz" firstAttribute="top" secondItem="ump-99-ikl" secondAttribute="top" constant="4" id="Nm0-VK-mes"/>
                                         <constraint firstAttribute="bottom" secondItem="DRe-SJ-6zz" secondAttribute="bottom" constant="4" id="PMK-zh-LYB"/>
+                                        <constraint firstItem="bbM-7d-w01" firstAttribute="top" secondItem="ump-99-ikl" secondAttribute="topMargin" constant="39" id="ZGG-AJ-qRD"/>
+                                        <constraint firstItem="bbM-7d-w01" firstAttribute="trailing" secondItem="ump-99-ikl" secondAttribute="trailingMargin" constant="8" id="ahx-Ez-lgd"/>
+                                        <constraint firstItem="bbM-7d-w01" firstAttribute="leading" secondItem="DRe-SJ-6zz" secondAttribute="trailing" constant="8" id="fzS-LM-2Qy"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
