@@ -17,12 +17,6 @@ class SentMemesTableViewController: UITableViewController {
     
     // MARK: - Life Cycle
     
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
@@ -34,7 +28,7 @@ class SentMemesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return memes.count
+        return self.memes.count
     }
 
     
@@ -42,7 +36,7 @@ class SentMemesTableViewController: UITableViewController {
         
         // dequeue a reusable cell and get the meme object at the specified index path
         let cell = tableView.dequeueReusableCell(withIdentifier: "SentMemesTableViewCell", for: indexPath) as! SentMemesTableViewCell
-        let meme: Meme = memes[(indexPath as NSIndexPath).row]
+        let meme: Meme = self.memes[(indexPath as NSIndexPath).row]
         
         // set the image and label
         cell.imageView?.image = meme.memedImage
@@ -58,9 +52,9 @@ class SentMemesTableViewController: UITableViewController {
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         
         // populate the view controller with data from the selected item
-        detailController.memeToPresent = memes[(indexPath as NSIndexPath).row]
+        detailController.memeToPresent = self.memes[(indexPath as NSIndexPath).row]
         
         // present the view controller using navigation
-        navigationController!.pushViewController(detailController, animated: true)
+        self.navigationController!.pushViewController(detailController, animated: true)
     }
 }
