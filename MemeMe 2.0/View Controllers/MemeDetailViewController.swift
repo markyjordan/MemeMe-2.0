@@ -12,7 +12,7 @@ class MemeDetailViewController: UIViewController {
 
     var memeToPresent: Meme!
     
-    @IBOutlet memeImageView: UIImageView!
+    @IBOutlet weak var memeImageView: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
 
