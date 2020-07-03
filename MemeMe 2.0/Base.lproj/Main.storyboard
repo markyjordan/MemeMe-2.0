@@ -278,6 +278,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pZk-qj-1Je"/>
                     </view>
+                    <connections>
+                        <outlet property="memeImageView" destination="8oZ-ro-CQq" id="XVq-ER-dbj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sth-j0-nhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
