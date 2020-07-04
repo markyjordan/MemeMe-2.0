@@ -256,7 +256,9 @@
                             <outlet property="delegate" destination="UQk-do-g4E" id="auj-af-k7f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zpR-az-B4p"/>
+                    <navigationItem key="navigationItem" id="zpR-az-B4p">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="3l7-yC-ROu"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUM-FO-qb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,6 +292,7 @@
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="rectangle.split.3x3.fill" catalog="system" width="128" height="93"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
