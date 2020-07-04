@@ -184,7 +184,9 @@
                             <outlet property="delegate" destination="g7Q-tw-24P" id="jxd-8P-iRS"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="7qg-xz-lXV"/>
+                    <navigationItem key="navigationItem" id="7qg-xz-lXV">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="q0a-5b-IDg"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="flowLayout" destination="Up3-Mo-Baq" id="okJ-lo-KUk"/>
                     </connections>
