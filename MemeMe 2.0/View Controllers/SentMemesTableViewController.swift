@@ -27,6 +27,11 @@ class SentMemesTableViewController: UITableViewController {
 
     // MARK: - UITableView Data Source Methods
 
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return self.memes.count
