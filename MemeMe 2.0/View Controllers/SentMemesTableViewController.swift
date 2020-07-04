@@ -12,6 +12,7 @@ class SentMemesTableViewController: UITableViewController {
 
     // this computed property accesses the shared data model
     var memes: [Meme]! {
+        
         return (UIApplication.shared.delegate as! AppDelegate).memes
     }
     
@@ -31,7 +32,6 @@ class SentMemesTableViewController: UITableViewController {
         return self.memes.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // dequeue a reusable cell and get the meme object at the specified index path
