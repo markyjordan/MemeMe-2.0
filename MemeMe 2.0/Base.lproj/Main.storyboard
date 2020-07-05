@@ -251,6 +251,9 @@
                                         <constraint firstItem="bbM-7d-w01" firstAttribute="leading" secondItem="DRe-SJ-6zz" secondAttribute="trailing" constant="8" id="fzS-LM-2Qy"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellImageView" destination="DRe-SJ-6zz" id="jux-PE-tJK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

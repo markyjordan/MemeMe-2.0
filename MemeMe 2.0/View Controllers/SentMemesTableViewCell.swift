@@ -10,6 +10,6 @@ import UIKit
 
 class SentMemesTableViewCell: UITableViewCell {
 
-
+    @IBOutlet weak var cellImageView: UIImageView!
     
 }
