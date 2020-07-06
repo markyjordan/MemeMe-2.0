@@ -253,6 +253,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellImageView" destination="DRe-SJ-6zz" id="jux-PE-tJK"/>
+                                    <outlet property="cellLabel" destination="bbM-7d-w01" id="0d4-Jt-gSK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
