@@ -28,9 +28,11 @@ class SentMemesCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         // register cell classes
+        
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // flow layout setup
+        
         let space: CGFloat = 3.0
         let cellWidth = (view.frame.size.width - (2 * space)) / 3.0
         let cellHeight = (view.frame.size.height - (2 * space)) / 3.0
@@ -45,6 +47,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         super.viewWillAppear(animated)
         
         // refresh the collection view to show current meme data
+        
         collectionView!.reloadData()
     }
 
