@@ -189,6 +189,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="flowLayout" destination="Up3-Mo-Baq" id="okJ-lo-KUk"/>
+                        <segue destination="S47-Pl-80g" kind="show" id="czg-82-KlI"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LtI-qH-0Pq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -265,10 +266,13 @@
                     <navigationItem key="navigationItem" id="zpR-az-B4p">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="3l7-yC-ROu"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="S47-Pl-80g" kind="show" id="ZTE-Es-T9n"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUM-FO-qb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680.79999999999995" y="74.630541871921181"/>
+            <point key="canvasLocation" x="681" y="75"/>
         </scene>
         <!--Meme Detail View Controller-->
         <scene sceneID="RAe-Ni-PdQ">
@@ -279,22 +283,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8oZ-ro-CQq">
-                                <rect key="frame" x="67" y="342" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pZk-qj-1Je"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tZC-P5-lpy"/>
                     <connections>
                         <outlet property="memeImageView" destination="8oZ-ro-CQq" id="XVq-ER-dbj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sth-j0-nhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1570" y="75"/>
+            <point key="canvasLocation" x="1592.8" y="439.65517241379314"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="czg-82-KlI"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
