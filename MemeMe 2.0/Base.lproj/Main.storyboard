@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myU-f1-OrV">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <color key="barTintColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="AYL-Dh-pm5">
@@ -31,7 +31,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHd-Rt-IYf">
-                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="675" width="375" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hpx-C3-jR0"/>
                                     <barButtonItem title="Item" image="camera" catalog="system" id="zw5-af-Axs">
@@ -52,15 +52,15 @@
                                 <color key="barTintColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-g3-sNZ">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="619"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTJ-6o-GOP">
-                                <rect key="frame" x="15" y="103" width="345" height="18.666666666666671"/>
+                                <rect key="frame" x="15" y="71" width="345" height="18.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wt6-3K-JlX">
-                                <rect key="frame" x="15" y="695.66666666666663" width="345" height="18.333333333333371"/>
+                                <rect key="frame" x="15" y="641.66666666666663" width="345" height="18.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2468" y="440"/>
+            <point key="canvasLocation" x="1681" y="440"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5kz-We-RNm">
@@ -185,7 +185,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="7qg-xz-lXV">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="q0a-5b-IDg"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="q0a-5b-IDg">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="rB8-pc-4g1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="flowLayout" destination="Up3-Mo-Baq" id="okJ-lo-KUk"/>
@@ -264,7 +268,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="zpR-az-B4p">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="3l7-yC-ROu"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="3l7-yC-ROu">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="S1Q-eY-16Y"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="S47-Pl-80g" kind="show" id="ZTE-Es-T9n"/>
@@ -302,11 +310,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sth-j0-nhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1578" y="440"/>
+            <point key="canvasLocation" x="2575" y="440"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZTE-Es-T9n"/>
+        <segue reference="czg-82-KlI"/>
+        <segue reference="rB8-pc-4g1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>

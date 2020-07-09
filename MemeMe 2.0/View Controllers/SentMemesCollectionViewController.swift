@@ -13,6 +13,7 @@ private let reuseIdentifier = "SentMemesCollectionViewCell"
 class SentMemesCollectionViewController: UICollectionViewController {
     
     // this computed property accesses the shared data model
+    
     var memes: [Meme]! {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -69,6 +70,15 @@ class SentMemesCollectionViewController: UICollectionViewController {
     // MARK: - UICollection View Delegate Methods
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        
+        // populate the view controller with data from the selected item
+        
+        detailController.memeToPresent = self.memes[(indexPath as NSIndexPath).row]
+        
+        // present the view controller using navigation
+        
+        self.navigationController!.pushViewController(detailController, animated: true)
     }
 }
