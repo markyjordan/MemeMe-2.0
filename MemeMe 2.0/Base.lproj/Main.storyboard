@@ -218,7 +218,7 @@
             </objects>
             <point key="canvasLocation" x="-226" y="75"/>
         </scene>
-        <!--Sent Memes Table View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="W8Z-UU-OoJ">
             <objects>
                 <tableViewController id="UQk-do-g4E" customClass="SentMemesTableViewController" customModule="MemeMe_2_0" customModuleProvider="target" sceneMemberID="viewController">
@@ -268,7 +268,7 @@
                             <outlet property="delegate" destination="UQk-do-g4E" id="auj-af-k7f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zpR-az-B4p">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="zpR-az-B4p">
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="NFR-wE-nT4"/>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="3l7-yC-ROu">
                             <connections>
@@ -316,8 +316,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZTE-Es-T9n"/>
-        <segue reference="S1Q-eY-16Y"/>
+        <segue reference="czg-82-KlI"/>
+        <segue reference="rB8-pc-4g1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
