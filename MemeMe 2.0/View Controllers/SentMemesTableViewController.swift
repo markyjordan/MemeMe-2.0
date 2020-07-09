@@ -53,6 +53,11 @@ class SentMemesTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        return true
+    }
+    
     // MARK: - UITableView Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
