@@ -10,10 +10,14 @@ import UIKit
 
 class SentMemesTableViewController: UITableViewController {
 
-    // this computed property accesses the shared data model
+    // this property allows for access and editing of the shared data model
+    
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    // this computed property accesses the shared data model (get only)
     
     var memes: [Meme]! {
-        
+
         return (UIApplication.shared.delegate as! AppDelegate).memes
     }
     
@@ -35,7 +39,7 @@ class SentMemesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return self.memes.count
+        return appDelegate.memes.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,7 +47,7 @@ class SentMemesTableViewController: UITableViewController {
         // dequeue a reusable cell and get the meme object at the specified index path
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SentMemesTableViewCell", for: indexPath) as! SentMemesTableViewCell
-        let meme: Meme = self.memes[(indexPath as NSIndexPath).row]
+        let meme: Meme = self.appDelegate.memes[(indexPath as NSIndexPath).row]
         
         // set the image and label
         
@@ -58,6 +62,15 @@ class SentMemesTableViewController: UITableViewController {
         return true
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            appDelegate.memes.remove(at: (indexPath as NSIndexPath).row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
     // MARK: - UITableView Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -66,7 +79,7 @@ class SentMemesTableViewController: UITableViewController {
         
         // populate the view controller with data from the selected item
         
-        detailController.memeToPresent = self.memes[(indexPath as NSIndexPath).row]
+        detailController.memeToPresent = self.appDelegate.memes[(indexPath as NSIndexPath).row]
         
         // present the view controller using navigation
         
