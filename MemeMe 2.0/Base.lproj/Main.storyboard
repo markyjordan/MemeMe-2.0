@@ -268,6 +268,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="zpR-az-B4p">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="NFR-wE-nT4"/>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="3l7-yC-ROu">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="S1Q-eY-16Y"/>
@@ -314,8 +315,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="czg-82-KlI"/>
-        <segue reference="rB8-pc-4g1"/>
+        <segue reference="ZTE-Es-T9n"/>
+        <segue reference="S1Q-eY-16Y"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
