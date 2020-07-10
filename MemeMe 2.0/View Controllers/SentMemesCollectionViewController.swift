@@ -13,7 +13,6 @@ private let reuseIdentifier = "SentMemesCollectionViewCell"
 class SentMemesCollectionViewController: UICollectionViewController {
     
     // this computed property accesses the shared data model
-    
     var memes: [Meme]! {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -29,11 +28,9 @@ class SentMemesCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         // register cell classes
-        
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // flow layout setup
-        
         let space: CGFloat = 3.0
         let cellWidth = (view.frame.size.width - (2 * space)) / 3.0
         let cellHeight = (view.frame.size.height - (2 * space)) / 3.0
@@ -48,7 +45,6 @@ class SentMemesCollectionViewController: UICollectionViewController {
         super.viewWillAppear(animated)
         
         // refresh the collection view to show current meme data
-        
         collectionView!.reloadData()
     }
 
@@ -63,8 +59,9 @@ class SentMemesCollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        // Configure the cell
-    
+        // configure the cell
+        
+        
         return cell
     }
 
@@ -75,11 +72,9 @@ class SentMemesCollectionViewController: UICollectionViewController {
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         
         // populate the view controller with data from the selected item
-        
         detailController.memeToPresent = self.memes[(indexPath as NSIndexPath).row]
         
-        // present the view controller using navigation
-        
+         present the view controller using navigation
         self.navigationController!.pushViewController(detailController, animated: true)
     }
 }

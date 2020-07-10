@@ -48,7 +48,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         initializeTextField(textField: bottomTextField, text: "TAP TO EDIT BOTTOM TEXT")
         
         // disable share button
-        
         shareButton.isEnabled = false
     }
 
@@ -57,11 +56,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewDidAppear(animated)
         
         // check if camera is available
-        
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         
         // subscribe to keyboard notifications
-        
         subscribeToKeyboardNotifications()
     }
     
@@ -70,7 +67,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewWillDisappear(animated)
         
         // unsubsribe from keyboard notifications
-        
         unsubscribeFromKeyboardNotifications()
     }
     
@@ -85,7 +81,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: - NSNotification Functions
     
     // observers
-    
     func subscribeToKeyboardNotifications() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -99,7 +94,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     // implement functions to act on notifications
-    
     @objc func keyboardWillShow(_ notification: Notification) {
         
         if bottomTextField.isEditing, view.frame.origin.y == 0 {
@@ -126,7 +120,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         if let originalImage = info[.originalImage] as? UIImage {
             
             // set photoImageView to display the selected image
-            
             photoImageView.image = originalImage
         }
         dismiss(animated: true, completion: nil)
@@ -150,15 +143,12 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let imagePickerVC = UIImagePickerController()
         
         // set the delegate(s)
-        
         imagePickerVC.delegate = self
         
         // specify sourceType
-        
         imagePickerVC.sourceType = .photoLibrary
         
         // enable share button
-        
         shareButton.isEnabled = true
         
         present(imagePickerVC, animated: true, completion: nil)
@@ -169,15 +159,12 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let imagePickerVC = UIImagePickerController()
         
         // set the delegate(s)
-        
         imagePickerVC.delegate = self
         
         // specify sourceType
-        
         imagePickerVC.sourceType = .camera
         
         // enable share button
-        
         shareButton.isEnabled = true
         
         present(imagePickerVC, animated: true, completion: nil)
@@ -186,18 +173,15 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func generateMemedImage() -> UIImage {
 
         // hide toolbar and navigation bar
-        
         hideNavAndToolBars(isHidden: true)
         
         // render view to an image
-        
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
         // show toolbar and navigation bar
-        
         hideNavAndToolBars(isHidden: false)
 
         return memedImage
@@ -206,12 +190,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func saveMemedImage(memedImage: UIImage) {
         
         // generate the meme
-        
         let meme = Meme(topTextField: topTextField.text!, bottomTextField: bottomTextField.text!, originalImage: photoImageView.image!, memedImage: memedImage)
         self.meme = meme
         
         // add the meme to the memes array in the App Delegate
-        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.memes.append(meme)
     }
@@ -219,7 +201,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction func shareMemedImage() {
         
         // generate a memed image
-        
         let memeToShare = generateMemedImage()
         let sharingActivity = UIActivityViewController(activityItems: [memeToShare], applicationActivities: nil)
         sharingActivity.completionWithItemsHandler = { (activityType, completed, returnedItems, activityError) in

@@ -11,11 +11,9 @@ import UIKit
 class SentMemesTableViewController: UITableViewController {
 
     // this property allows for access and editing of the shared data model
-    
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     // this computed property accesses the shared data model (get only)
-    
     var memes: [Meme]! {
 
         return (UIApplication.shared.delegate as! AppDelegate).memes
@@ -45,12 +43,10 @@ class SentMemesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // dequeue a reusable cell and get the meme object at the specified index path
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "SentMemesTableViewCell", for: indexPath) as! SentMemesTableViewCell
         let meme: Meme = self.appDelegate.memes[(indexPath as NSIndexPath).row]
         
         // set the image and label
-        
         cell.imageView?.image = meme.memedImage
         cell.textLabel?.text = meme.topTextField + "..." + meme.bottomTextField
         
@@ -78,11 +74,9 @@ class SentMemesTableViewController: UITableViewController {
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         
         // populate the view controller with data from the selected item
-        
         detailController.memeToPresent = self.appDelegate.memes[(indexPath as NSIndexPath).row]
         
         // present the view controller using navigation
-        
         self.navigationController!.pushViewController(detailController, animated: true)
     }
 }
