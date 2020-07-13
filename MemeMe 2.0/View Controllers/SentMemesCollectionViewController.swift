@@ -74,7 +74,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         // populate the view controller with data from the selected item
         detailController.memeToPresent = self.memes[(indexPath as NSIndexPath).row]
         
-         present the view controller using navigation
+        // present the view controller using navigation
         self.navigationController!.pushViewController(detailController, animated: true)
     }
 }
