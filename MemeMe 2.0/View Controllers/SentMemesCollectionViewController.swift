@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "SentMemesCollectionViewCell"
 
-class SentMemesCollectionViewController: UICollectionViewController {
+class SentMemesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     // this property allows for access and editing of the shared data model
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -32,15 +32,6 @@ class SentMemesCollectionViewController: UICollectionViewController {
         
         // register cell
         collectionView!.register(SentMemesCollectionViewCell.self, forCellWithReuseIdentifier: "SentMemesCollectionViewCell")
-
-        // flow layout setup
-        let space: CGFloat = 3.0
-        let cellWidth = (view.frame.size.width - (2 * space)) / 3.0
-        let cellHeight = (view.frame.size.height - (2 * space)) / 3.0
-        
-        flowLayout.minimumInteritemSpacing = space
-        flowLayout.minimumLineSpacing = space
-        flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -126,5 +117,27 @@ class SentMemesCollectionViewController: UICollectionViewController {
         
         // present the view controller using navigation
         self.navigationController!.pushViewController(detailController, animated: true)
+    }
+    
+    // MARK: - UICollection View Delegate Flow Layout Methods
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let cellWidth = (self.view.frame.width - 3.0) / 3.0
+        let cellHeight = (self.view.frame.height - 3.0) / 3.0
+        
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        // 1.5 pixels of line spacing
+        return 1.5
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+        // 1.5 pixels of interitem spacing
+        return 1.5
     }
 }
