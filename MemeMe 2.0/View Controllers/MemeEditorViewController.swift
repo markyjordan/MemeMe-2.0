@@ -211,4 +211,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         }
         present(sharingActivity, animated: true, completion: nil)
     }
+    
+    @IBAction func cancelMemeEditor(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    }
 }

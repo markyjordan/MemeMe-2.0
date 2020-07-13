@@ -29,6 +29,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="FSN-J6-ByZ">
                                             <color key="tintColor" red="0.0" green="0.71372549019999998" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="cancelMemeEditor:" destination="BYZ-38-t0r" id="oaf-ca-ZUy"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
