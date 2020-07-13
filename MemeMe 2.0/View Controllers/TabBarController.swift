@@ -15,6 +15,6 @@ class TabBarController: UITabBarController {
         super.viewWillAppear(animated)
         
         // unhighlight unselected tab bar items
-        self.tabBar.unselectedItemTintColor = .systemGray
+        self.tabBar.unselectedItemTintColor = .darkGray
     }
 }
