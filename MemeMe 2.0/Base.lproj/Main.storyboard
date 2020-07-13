@@ -240,26 +240,31 @@
                                                 <constraint firstAttribute="width" constant="114" id="2VU-0d-DLQ"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbM-7d-w01">
-                                            <rect key="frame" x="130" y="50" width="237" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60n-gj-Cl4">
+                                            <rect key="frame" x="130" y="79" width="229" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okp-5j-4Mx">
+                                            <rect key="frame" x="130" y="26" width="229" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="bbM-7d-w01" secondAttribute="bottom" constant="39" id="ChA-QF-zJT"/>
                                         <constraint firstItem="DRe-SJ-6zz" firstAttribute="leading" secondItem="ump-99-ikl" secondAttribute="leading" constant="8" id="Fc9-ai-fqS"/>
                                         <constraint firstItem="DRe-SJ-6zz" firstAttribute="top" secondItem="ump-99-ikl" secondAttribute="top" constant="4" id="Nm0-VK-mes"/>
                                         <constraint firstAttribute="bottom" secondItem="DRe-SJ-6zz" secondAttribute="bottom" constant="4" id="PMK-zh-LYB"/>
-                                        <constraint firstItem="bbM-7d-w01" firstAttribute="top" secondItem="ump-99-ikl" secondAttribute="topMargin" constant="39" id="ZGG-AJ-qRD"/>
-                                        <constraint firstItem="bbM-7d-w01" firstAttribute="trailing" secondItem="ump-99-ikl" secondAttribute="trailingMargin" constant="8" id="ahx-Ez-lgd"/>
-                                        <constraint firstItem="bbM-7d-w01" firstAttribute="leading" secondItem="DRe-SJ-6zz" secondAttribute="trailing" constant="8" id="fzS-LM-2Qy"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cellBottomTextLabel" destination="60n-gj-Cl4" id="RP3-kW-guh"/>
                                     <outlet property="cellImageView" destination="DRe-SJ-6zz" id="jux-PE-tJK"/>
-                                    <outlet property="cellLabel" destination="bbM-7d-w01" id="0d4-Jt-gSK"/>
+                                    <outlet property="cellTopTextLabel" destination="okp-5j-4Mx" id="uZF-jY-Z0p"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -282,7 +287,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUM-FO-qb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="75"/>
+            <point key="canvasLocation" x="680.79999999999995" y="74.630541871921181"/>
         </scene>
         <!--Meme Detail View Controller-->
         <scene sceneID="RAe-Ni-PdQ">
@@ -316,8 +321,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="czg-82-KlI"/>
-        <segue reference="rB8-pc-4g1"/>
+        <segue reference="ZTE-Es-T9n"/>
+        <segue reference="S1Q-eY-16Y"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
