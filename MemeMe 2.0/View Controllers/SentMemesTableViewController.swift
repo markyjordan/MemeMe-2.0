@@ -94,7 +94,7 @@ class SentMemesTableViewController: UITableViewController {
         let meme: Meme = appDelegate.memes[(indexPath as NSIndexPath).row]
         
         // set the image and label
-        cell.imageView.image = meme.memedImage
+        cell.cellImageView.image = meme.memedImage
         cell.topTextLabel.text = meme.topTextField
         cell.bottomTextLabel.text = meme.bottomTextField
         

@@ -30,9 +30,6 @@ class SentMemesCollectionViewController: UICollectionViewController {
        
         super.viewDidLoad()
 
-        // register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
         // flow layout setup
         let space: CGFloat = 3.0
         let cellWidth = (view.frame.size.width - (2 * space)) / 3.0
@@ -105,10 +102,12 @@ class SentMemesCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        // dequeue a reusable cell and get the meme object at the specified index path
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SentMemesCollectionViewCell", for: indexPath) as! SentMemesCollectionViewCell
+        let meme: Meme = appDelegate.memes[(indexPath as NSIndexPath).row]
     
-        // configure the cell
-        
+        // set the image
+        cell.cellImageView.image = meme.memedImage
         
         return cell
     }
