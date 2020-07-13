@@ -19,6 +19,7 @@ class MemeDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         memeImageView.image = memeToPresent.memedImage
         self.tabBarController?.tabBar.isHidden = true
+//        self.view.bringSubviewToFront(memeImageView)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
