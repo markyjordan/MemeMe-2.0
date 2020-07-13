@@ -12,6 +12,9 @@ private let reuseIdentifier = "SentMemesCollectionViewCell"
 
 class SentMemesCollectionViewController: UICollectionViewController {
     
+    // this property allows for access and editing of the shared data model
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     // this computed property accesses the shared data model
     var memes: [Meme]! {
         
@@ -52,9 +55,54 @@ class SentMemesCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        // set the placeholder view if there is no meme data to show
+        if appDelegate.memes.count == 0 {
+            setEmptyView(title: "No Memes Stored", message: "Tap '+' to create a new meme!")
+        } else {
+            restoreCollectionView()
+        }
         return memes.count
     }
 
+    // displays an empty placeholder view
+    func setEmptyView(title: String, message: String) {
+
+        let emptyView = UIView(frame: CGRect(x: 0, y: 0, width: collectionView.frame.width, height: collectionView.frame.height))
+        let titleLabel = UILabel()
+        let messageLabel = UILabel()
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textColor = .black
+        titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 24)
+        messageLabel.textColor = .darkGray
+        messageLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 10)
+        emptyView.addSubview(titleLabel)
+        emptyView.addSubview(messageLabel)
+
+        // set constraints for empty view
+        titleLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+        messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 3).isActive = true
+        messageLabel.leftAnchor.constraint(equalTo: emptyView.leftAnchor, constant: 10).isActive = true
+        messageLabel.rightAnchor.constraint(equalTo: emptyView.rightAnchor, constant: -10).isActive = true
+        titleLabel.text = title
+        messageLabel.text = message
+        titleLabel.numberOfLines = 0
+        messageLabel.numberOfLines = 0
+        titleLabel.textAlignment = .center
+        messageLabel.textAlignment = .center
+        
+        collectionView.backgroundView = emptyView
+        navigationItem.leftBarButtonItem = nil
+    }
+   
+    // restores collection view if meme data exists
+    func restoreCollectionView() {
+       
+        collectionView.backgroundView = nil
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
