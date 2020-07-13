@@ -21,6 +21,14 @@ class SentMemesTableViewController: UITableViewController {
     
     // MARK: - Life Cycle
     
+    override func viewDidLoad() {
+           
+        super.viewDidLoad()
+        
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableView.automaticDimension
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
@@ -97,6 +105,12 @@ class SentMemesTableViewController: UITableViewController {
         cell.cellImageView.image = meme.memedImage
         cell.topTextLabel.text = meme.topTextField
         cell.bottomTextLabel.text = meme.bottomTextField
+        
+        // create border around cell image
+        cell.cellImageView.layer.borderColor = UIColor(white: 0.0, alpha: 1.0).cgColor
+        cell.cellImageView.layer.masksToBounds = true
+        cell.cellImageView.contentMode = .scaleAspectFit
+        cell.cellImageView.layer.borderWidth = 1
         
         return cell
     }

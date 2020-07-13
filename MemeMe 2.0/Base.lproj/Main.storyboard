@@ -248,20 +248,20 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="In0-8b-7IB">
-                                            <rect key="frame" x="144" y="81" width="215" height="21"/>
+                                            <rect key="frame" x="111" y="81" width="248" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tEn-rP-sMB">
-                                            <rect key="frame" x="15" y="4" width="113" height="113"/>
+                                            <rect key="frame" x="15" y="10.666666666666664" width="80" height="100"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="113" id="5hd-hJ-UXn"/>
-                                                <constraint firstAttribute="width" constant="113" id="NYU-8R-CZG"/>
+                                                <constraint firstAttribute="height" constant="80" id="5hd-hJ-UXn"/>
+                                                <constraint firstAttribute="width" constant="80" id="NYU-8R-CZG"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEv-2u-EVe">
-                                            <rect key="frame" x="144" y="19" width="215" height="21"/>
+                                            <rect key="frame" x="111" y="19" width="248" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -273,8 +273,8 @@
                                         <constraint firstItem="tEn-rP-sMB" firstAttribute="leading" secondItem="ump-99-ikl" secondAttribute="leading" constant="15" id="Eb1-Ld-TF4"/>
                                         <constraint firstItem="MEv-2u-EVe" firstAttribute="top" secondItem="ump-99-ikl" secondAttribute="topMargin" constant="8" id="Rxa-Gh-smB"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="MEv-2u-EVe" secondAttribute="trailing" id="eMl-K6-OGO"/>
-                                        <constraint firstItem="tEn-rP-sMB" firstAttribute="top" secondItem="ump-99-ikl" secondAttribute="top" constant="4" id="iOf-VD-MbG"/>
-                                        <constraint firstAttribute="bottom" secondItem="tEn-rP-sMB" secondAttribute="bottom" constant="4" id="xof-rK-STS"/>
+                                        <constraint firstItem="tEn-rP-sMB" firstAttribute="top" secondItem="ump-99-ikl" secondAttribute="top" constant="10.5" id="iOf-VD-MbG"/>
+                                        <constraint firstAttribute="bottom" secondItem="tEn-rP-sMB" secondAttribute="bottom" constant="10.5" id="xof-rK-STS"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="In0-8b-7IB" secondAttribute="bottom" constant="8" id="zjK-Ec-f2M"/>
                                         <constraint firstItem="In0-8b-7IB" firstAttribute="leading" secondItem="tEn-rP-sMB" secondAttribute="trailing" constant="16" id="zvu-9i-Qa7"/>
                                     </constraints>
@@ -342,8 +342,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="czg-82-KlI"/>
-        <segue reference="rB8-pc-4g1"/>
+        <segue reference="ZTE-Es-T9n"/>
+        <segue reference="S1Q-eY-16Y"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
