@@ -15,12 +15,12 @@ class SentMemesCollectionViewController: UICollectionViewController {
     // this property allows for access and editing of the shared data model
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    // this computed property accesses the shared data model
-    var memes: [Meme]! {
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.memes
-    }
+//    // this computed property accesses the shared data model
+//    var memes: [Meme]! {
+//
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        return appDelegate.memes
+//    }
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
@@ -58,7 +58,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         } else {
             restoreCollectionView()
         }
-        return memes.count
+        return appDelegate.memes.count
     }
 
     // displays an empty placeholder view
@@ -119,7 +119,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         
         // populate the view controller with data from the selected item
-        detailController.memeToPresent = self.memes[(indexPath as NSIndexPath).row]
+        detailController.memeToPresent = appDelegate.memes[(indexPath as NSIndexPath).row]
         
         // present the view controller using navigation
         self.navigationController!.pushViewController(detailController, animated: true)
