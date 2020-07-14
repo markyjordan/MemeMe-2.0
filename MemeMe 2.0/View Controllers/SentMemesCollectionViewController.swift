@@ -35,13 +35,13 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
         // register cell
         collectionView!.register(SentMemesCollectionViewCell.self, forCellWithReuseIdentifier: "SentMemesCollectionViewCell")
         
-//        let space: CGFloat = 1.5
-//        let cellWidth = (self.view.frame.width - 3.0) / 3.0
-//        let cellHeight = (self.view.frame.height - 3.0) / 3.0
-//
-//        flowLayout.minimumInteritemSpacing = space
-//        flowLayout.minimumLineSpacing = space
-//        flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        let space: CGFloat = 1.5
+        let cellWidth = (self.view.frame.width - 3.0) / 3.0
+        let cellHeight = (self.view.frame.height - 3.0) / 3.0
+
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -130,23 +130,23 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
     }
     
     // MARK: - UICollectionView Delegate Flow Layout Methods
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+
         let cellWidth = (self.view.frame.width - 3.0) / 3.0
         let cellHeight = (self.view.frame.height - 3.0) / 3.0
-        
+
         return CGSize(width: cellWidth, height: cellHeight)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        
+
         // 1.5 pixels of line spacing
         return 1.5
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        
+
         // 1.5 pixels of interitem spacing
         return 1.5
     }

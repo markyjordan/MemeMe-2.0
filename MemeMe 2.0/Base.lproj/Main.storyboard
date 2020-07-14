@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myU-f1-OrV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <color key="barTintColor" red="0.098039215686274508" green="0.14901960784313725" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="AYL-Dh-pm5">
@@ -37,7 +37,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHd-Rt-IYf">
-                                <rect key="frame" x="0.0" y="675" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="734" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hpx-C3-jR0"/>
                                     <barButtonItem title="Item" image="camera" catalog="system" id="zw5-af-Axs">
@@ -58,15 +58,15 @@
                                 <color key="barTintColor" red="0.098039215686274508" green="0.14901960784313725" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-g3-sNZ">
-                                <rect key="frame" x="0.0" y="56" width="375" height="619"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="646"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTJ-6o-GOP">
-                                <rect key="frame" x="15" y="71" width="345" height="18.666666666666671"/>
+                                <rect key="frame" x="15" y="103" width="345" height="18.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wt6-3K-JlX">
-                                <rect key="frame" x="15" y="641.66666666666663" width="345" height="18.333333333333371"/>
+                                <rect key="frame" x="15" y="700.66666666666663" width="345" height="18.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -165,7 +165,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Up3-Mo-Baq">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Up3-Mo-Baq">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -180,14 +180,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8kY-s6-mRj">
-                                            <rect key="frame" x="8" y="8" width="112" height="112"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="8kY-s6-mRj" secondAttribute="bottom" id="T8X-vx-Ilk"/>
-                                        <constraint firstItem="8kY-s6-mRj" firstAttribute="top" secondItem="CV7-1f-c6T" secondAttribute="topMargin" id="e9L-cV-KVm"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="8kY-s6-mRj" secondAttribute="trailing" id="kqw-aM-dDO"/>
-                                        <constraint firstItem="8kY-s6-mRj" firstAttribute="leading" secondItem="CV7-1f-c6T" secondAttribute="leadingMargin" id="q6K-eQ-efw"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8kY-s6-mRj" secondAttribute="bottom" constant="-8" id="T8X-vx-Ilk"/>
+                                        <constraint firstItem="8kY-s6-mRj" firstAttribute="top" secondItem="CV7-1f-c6T" secondAttribute="topMargin" constant="-8" id="e9L-cV-KVm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8kY-s6-mRj" secondAttribute="trailing" constant="-8" id="kqw-aM-dDO"/>
+                                        <constraint firstItem="8kY-s6-mRj" firstAttribute="leading" secondItem="CV7-1f-c6T" secondAttribute="leadingMargin" constant="-8" id="q6K-eQ-efw"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
@@ -204,7 +204,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="q0a-5b-IDg">
                             <color key="tintColor" red="0.0" green="0.71372549019999998" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="rB8-pc-4g1"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="rB8-pc-4g1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -307,7 +307,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3l7-yC-ROu">
                             <color key="tintColor" red="0.0" green="0.71372549019999998" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="S1Q-eY-16Y"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="S1Q-eY-16Y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -351,7 +351,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rB8-pc-4g1"/>
+        <segue reference="S1Q-eY-16Y"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
