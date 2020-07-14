@@ -10,5 +10,5 @@ import UIKit
 
 class SentMemesCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var cellImageView: UIImageView!
+    @IBOutlet weak var cellImageView: UIImageView!
 }

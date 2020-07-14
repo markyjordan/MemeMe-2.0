@@ -12,6 +12,8 @@ private let reuseIdentifier = "SentMemesCollectionViewCell"
 
 class SentMemesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    // MARK - Properties/Outlets
+    
     // this property allows for access and editing of the shared data model
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -32,6 +34,14 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
         
         // register cell
         collectionView!.register(SentMemesCollectionViewCell.self, forCellWithReuseIdentifier: "SentMemesCollectionViewCell")
+        
+//        let space: CGFloat = 1.5
+//        let cellWidth = (self.view.frame.width - 3.0) / 3.0
+//        let cellHeight = (self.view.frame.height - 3.0) / 3.0
+//
+//        flowLayout.minimumInteritemSpacing = space
+//        flowLayout.minimumLineSpacing = space
+//        flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -106,7 +116,7 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
         return cell
     }
 
-    // MARK: - UICollection View Delegate Methods
+    // MARK: - UICollectionView Delegate Methods
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -119,7 +129,7 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
         self.navigationController!.pushViewController(detailController, animated: true)
     }
     
-    // MARK: - UICollection View Delegate Flow Layout Methods
+    // MARK: - UICollectionView Delegate Flow Layout Methods
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
