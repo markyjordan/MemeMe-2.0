@@ -17,13 +17,6 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
     // this property allows for access and editing of the shared data model
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-//    // this computed property accesses the shared data model
-//    var memes: [Meme]! {
-//
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        return appDelegate.memes
-//    }
-    
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     // MARK - Life Cycle

@@ -13,12 +13,6 @@ class SentMemesTableViewController: UITableViewController {
     // this property allows for access and editing of the shared data model
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-//    // this computed property accesses the shared data model (get only)
-//    var memes: [Meme]! {
-//
-//        return (UIApplication.shared.delegate as! AppDelegate).memes
-//    }
-    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
