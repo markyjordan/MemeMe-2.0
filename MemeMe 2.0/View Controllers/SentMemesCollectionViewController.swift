@@ -123,7 +123,7 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         let cellWidth = (self.view.frame.width - 3.0) / 3.0
-        let cellHeight = (self.view.frame.height - 3.0) / 3.0
+        let cellHeight = (self.view.frame.width - 3.0) / 3.0
 
         return CGSize(width: cellWidth, height: cellHeight)
     }
