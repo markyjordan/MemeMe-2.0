@@ -106,11 +106,12 @@ class SentMemesTableViewController: UITableViewController {
         cell.topTextLabel.text = meme.topTextField
         cell.bottomTextLabel.text = meme.bottomTextField
         
-        // create border around cell image
+        // create border around cell image and added background color
         cell.cellImageView.layer.borderColor = UIColor(white: 0.0, alpha: 1.0).cgColor
         cell.cellImageView.layer.masksToBounds = true
         cell.cellImageView.contentMode = .scaleAspectFit
         cell.cellImageView.layer.borderWidth = 1
+        cell.cellImageView.layer.backgroundColor = UIColor(white: 0.0, alpha: 1.0).cgColor
         
         return cell
     }
