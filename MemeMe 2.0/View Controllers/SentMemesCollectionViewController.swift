@@ -31,17 +31,6 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
     override func viewDidLoad() {
        
         super.viewDidLoad()
-        
-        // register cell
-        collectionView!.register(SentMemesCollectionViewCell.self, forCellWithReuseIdentifier: "SentMemesCollectionViewCell")
-        
-        let space: CGFloat = 1.5
-        let cellWidth = (self.view.frame.width - 3.0) / 3.0
-        let cellHeight = (self.view.frame.height - 3.0) / 3.0
-
-        flowLayout.minimumInteritemSpacing = space
-        flowLayout.minimumLineSpacing = space
-        flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
     }
     
     override func viewWillAppear(_ animated: Bool) {

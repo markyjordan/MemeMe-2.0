@@ -98,6 +98,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7Dw-Kj-XhA"/>
                     <connections>
                         <outlet property="bottomTextField" destination="wt6-3K-JlX" id="ZkQ-rM-gnZ"/>
                         <outlet property="cameraButton" destination="zw5-af-Axs" id="S2b-dD-3NZ"/>
@@ -351,7 +352,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="S1Q-eY-16Y"/>
+        <segue reference="rB8-pc-4g1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
