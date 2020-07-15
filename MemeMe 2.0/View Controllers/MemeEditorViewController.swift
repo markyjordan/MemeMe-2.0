@@ -138,7 +138,39 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     // MARK: - Image Picker
     
-    @IBAction func selectImageFromAlbum(_ sender: Any) {
+//    @IBAction func selectImageFromAlbum(_ sender: Any) {
+//
+//        let imagePickerVC = UIImagePickerController()
+//
+//        // set the delegate(s)
+//        imagePickerVC.delegate = self
+//
+//        // specify sourceType
+//        imagePickerVC.sourceType = .photoLibrary
+//
+//        // enable share button
+//        shareButton.isEnabled = true
+//
+//        present(imagePickerVC, animated: true, completion: nil)
+//    }
+//
+//    @IBAction func selectImageFromCamera(_ sender: Any) {
+//
+//        let imagePickerVC = UIImagePickerController()
+//
+//        // set the delegate(s)
+//        imagePickerVC.delegate = self
+//
+//        // specify sourceType
+//        imagePickerVC.sourceType = .camera
+//
+//        // enable share button
+//        shareButton.isEnabled = true
+//
+//        present(imagePickerVC, animated: true, completion: nil)
+//    }
+    
+    @IBAction func selectImage(_ sender: Any) {
         
         let imagePickerVC = UIImagePickerController()
         
@@ -146,7 +178,17 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         imagePickerVC.delegate = self
         
         // specify sourceType
-        imagePickerVC.sourceType = .photoLibrary
+        let tabBarButton = sender as! UIBarButtonItem
+        
+        switch tabBarButton.tag {
+            
+        case 0:
+            imagePickerVC.sourceType = .camera
+        case 1:
+            imagePickerVC.sourceType = .photoLibrary
+        default:
+            break
+        }
         
         // enable share button
         shareButton.isEnabled = true
@@ -154,17 +196,18 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         present(imagePickerVC, animated: true, completion: nil)
     }
     
-    @IBAction func selectImageFromCamera(_ sender: Any) {
-        
+    @IBAction func selectImage2(_ sender: Any) {
+           
+        let tabBarButton = sender as! UIBarButtonItem
         let imagePickerVC = UIImagePickerController()
         
-        // set the delegate(s)
+        // set the delegate
         imagePickerVC.delegate = self
-        
+
         // specify sourceType
-        imagePickerVC.sourceType = .camera
+        imagePickerVC.sourceType = tabBarButton.tag == 0 ? .camera : .photoLibrary
         
-        // enable share button
+        // emable share button
         shareButton.isEnabled = true
         
         present(imagePickerVC, animated: true, completion: nil)
