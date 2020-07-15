@@ -89,8 +89,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func unsubscribeFromKeyboardNotifications() {
         
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self)
     }
     
     // implement functions to act on notifications
@@ -130,12 +129,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         dismiss(animated: true, completion: nil)
     }
     
-    func hideNavAndToolBars(isHidden: Bool) {
-        
-        navigationBar.isHidden = isHidden
-        toolBar.isHidden = isHidden
-    }
-    
     // MARK: - Image Picker
     
     @IBAction func selectImage(_ sender: Any) {
@@ -162,6 +155,12 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         shareButton.isEnabled = true
         
         present(imagePickerVC, animated: true, completion: nil)
+    }
+    
+    func hideNavAndToolBars(isHidden: Bool) {
+        
+        navigationBar.isHidden = isHidden
+        toolBar.isHidden = isHidden
     }
     
     func generateMemedImage() -> UIImage {
